@@ -3,11 +3,14 @@ function! s:wiseman_f_map()
   let pos2 = deepcopy(pos1)
   let pos2[1] -= 1
   let line = getline('.')
+  let c = ''
   while 1
     call matchadd('FFF', printf('\%%%dl\%%>%dc.*\%%<%dc', pos2[0], pos2[1], pos2[1]+2))
+    echohl Title | echo ":WiseMan: " . c | echohl None
     redraw
     call clearmatches()
     let k = getchar()
+    let c = nr2char(k)
     if k == 13
       break
     elseif k == 2
@@ -38,7 +41,6 @@ function! s:wiseman_f_map()
         let pos2[1] += 1
       endif
     elseif k != 0
-      let c = nr2char(k)
       let pos = stridx(line, c, pos2[1]+1)
       if pos != -1
         let pos2[1] = pos
@@ -46,6 +48,7 @@ function! s:wiseman_f_map()
     endif
   endwhile
   call clearmatches()
+  redraw | echo
   if pos1[1] > pos2[1]
     return (pos1[1] - pos2[1] - 1) . "h"
   else
