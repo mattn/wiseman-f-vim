@@ -1,0 +1,34 @@
+*wiseman-f.txt* WiseMan-F
+
+Author: Yasuhiro Matsumoto <mattn.jp@gmail.com>
+WebSite: http://mattn.kaoriya.net/
+Repository: http://github.com/mattn/wiseman-f-vim
+Site: http://mattn.github.com/wiseman-f-vim
+License: BSD style license
+==============================================================================
+INTRODUCTION                                            *wiseman-f-introduction*
+
+*wiseman-f* makes finding target position easily for |cf|.
+For example, probably, you may be missing target character, or too short to
+the target, or you can across the target. *wizeman-f* provides easily motion
+like behavior for |fc|.
+
+==============================================================================
+USAGE                                                          *wiseman-f-usage*
+
+This plugin assign |!| as omap. Then, you can type 'c!' same like "cf".
+
+  * You can move cursor with cursor <c-b>/<c-f> or arrow keys <left>/<right>.
+  * You can move to cursor to begin/end of line with ^ or $ or 0.
+  * You can move to cursor to original position with <c-g>
+  * You can escape this mode with <esc> or <c-c>
+  * You can decide the target with <cr>
+
+==============================================================================
+LINKS                                                          *wiseman-f-links*
+
+This is inspired from clever-f:
+  https://github.com/rhysd/clever-f.vim
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:noet:fen:fdl=0:
