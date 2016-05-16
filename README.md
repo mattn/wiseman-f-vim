@@ -5,4 +5,4 @@ WiseMan-f
 
 ![](http://go-gyazo.appspot.com/e9a2ba2b11061f9c.png)
 
-[screencast](http://ascii.io/a/2301)
+[![asciicast](https://asciinema.org/a/2301.png)](https://asciinema.org/a/2301)
